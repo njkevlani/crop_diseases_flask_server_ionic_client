@@ -1,0 +1,34 @@
+<!--
+  Generated template for the CameraModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Select Image</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<button ion-button outline class="indibtn" (click)="camerabtn()">
+	<!-- <ion-icon name="ios-camera-outline" class="indiimage" ng-class="{'icon ios-camera-outline': cliked1, 'icon ios-camera': !cliked1}"></ion-icon> -->
+	<ion-icon *ngIf="bookmarked" name="ios-camera-outline" class="indiimage"></ion-icon>
+	<ion-icon *ngIf="bookmarked != true" name="ios-camera" class="indiimage"></ion-icon>
+	<span class="inditext">Take Image from Camera</span>
+</button>
+
+<span class="ortext">OR</span>
+
+<button ion-button outline class="indibtn" (click)="gallerybtn()">
+	<ion-icon name="ios-images-outline" class="indiimage" *ngIf="bookmarked1"></ion-icon>
+	<ion-icon name="ios-images" class="indiimage" *ngIf="bookmarked1 != true"></ion-icon>
+	<span class="inditext" >Select Image from Gallery</span>
+</button>
+
+</ion-content>
+<!-- <ion-icon name="ios-camera-outline" class="indiimage" ></ion-icon>
+	<span class="inditext">Take Image from Camera</span> -->

@@ -1,0 +1,35 @@
+<!-- FEED -->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Feed
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card *ngFor="let feed of feeds">
+  <img src="assets/imgs/dummy.jpg" class="cardimg">
+  <ion-card-content>
+    <p>Wait a minute. Wait a minute,  This is heavy.</p>
+  </ion-card-content>
+  <ion-row id="id1">
+    <ion-col>
+      <button ion-button icon-left full clear small (click)="thumbsup($event)">
+        <ion-icon name="ios-thumbs-up-outline" class="thumbsup-id1"></ion-icon>
+        <div>OK</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left full clear small>
+        <ion-icon name="ios-thumbs-down-outline" class="thumbsdown-id2"></ion-icon>
+        <div>Not OK</div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+
+
+
+</ion-content>
